@@ -91,7 +91,7 @@ const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.href}>
+                <Link href={page.href} key={page.href}>
                   <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
@@ -120,7 +120,7 @@ const Header = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link href={page.href}>
+              <Link href={page.href} key={page.href}>
                 <Button
                   key={page.name}
                   onClick={handleCloseNavMenu}
